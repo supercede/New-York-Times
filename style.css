@@ -81,6 +81,17 @@ nav a,
   margin-top: 70px;
 }
 
+#error {
+  text-align: center;
+  font-size: 2em;
+  margin: 50px;
+  display: none;
+}
+
+#error a {
+  color: red;
+}
+
 #content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

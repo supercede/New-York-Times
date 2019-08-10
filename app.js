@@ -4,23 +4,40 @@ function getArticle() {
   fetch(api)
     .then(response => response.json())
     .then(data => {
-      const { results } = data;
-      console.log(results);
-      displayArticle(results);
-      formatLead();
+      try {
+        const { results } = data;
+        // console.log(results);
+        displayArticle(results);
+        formatLead();
+      } catch (err) {
+        console.error(err);
+        const error = document.getElementById("error");
+        error.style.display = "block";
+      }
     });
 }
 
 function displayArticle(params) {
   let articles = shuffleArticles(params);
+  // articles = articles.filter(
+  //   article => article.multimedia[article.multimedia.length - 1] !== undefined
+  // );
   articles = articles.slice(0, 16);
   let html = "";
   articles.forEach(article => {
+    if (article.multimedia[article.multimedia.length - 1] !== undefined) {
+      img = article.multimedia[article.multimedia.length - 1];
+      url = img.url;
+      caption = img.caption;
+    } else {
+      img = "";
+      url = "nyt_logo.png";
+      caption = "";
+    }
+    console.log(img);
     html += `<section class="news-item">
       <a href='${article.url}' target='_blank'><figure>
-        <img src="${article.multimedia[4].url}" alt='${
-      article.multimedia[4].caption
-    }' title='${article.multimedia[4].caption}'/>
+        <img src="${url}" alt='${caption}' title='${caption}'/>
        
       </figure>
       <div class="para">
