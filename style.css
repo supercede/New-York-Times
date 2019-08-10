@@ -68,7 +68,8 @@ nav a,
 .nav-item:hover {
   background-color: purple;
   color: white;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .nav {
