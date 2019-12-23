@@ -19,24 +19,27 @@ function getArticle() {
 
 function displayArticle(params) {
   let articles = shuffleArticles(params);
-  // articles = articles.filter(
-  //   article => article.multimedia[article.multimedia.length - 1] !== undefined
-  // );
   articles = articles.slice(0, 16);
   let html = "";
-  articles.forEach(article => {
-    if (article.multimedia[article.multimedia.length - 1] !== undefined) {
-      img = article.multimedia[article.multimedia.length - 1];
+  articles.forEach((article, i) => {
+    // if (article.multimedia[article.multimedia.length - 1] !== undefined) {
+    if (article.multimedia.length > 0) {
+      if (i === 0) {
+        img = article.multimedia[article.multimedia.length - 1];
+      } else {
+        img = article.multimedia[3];
+      }
       url = img.url;
       caption = img.caption;
     } else {
       img = "";
-      url = "nyt_logo.png";
+      url = "../images/nyt_logo.png";
       caption = "";
     }
-    console.log(img);
+    // console.log(img);
     html += `<section class="news-item">
-      <a href='${article.url}' target='_blank'><figure>
+      <a href='${article.url}' rel="noopener noreferrer" target='_blank'>
+      <figure>
         <img src="${url}" alt='${caption}' title='${caption}'/>
        
       </figure>
@@ -78,7 +81,6 @@ function formatLead() {
 
   fig.setAttribute("id", "lead-image");
   para.setAttribute("id", "lead-para");
-  console.log(lead);
 }
 
 getArticle();

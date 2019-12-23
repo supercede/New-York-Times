@@ -27,10 +27,12 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  height: 100px;
+  z-index: 2;
 }
 
 .header-content {
-  height: 80px;
+  height: 100px;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -41,35 +43,51 @@ header {
 logo {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-logo i {
-  font-size: 1.5em;
+.logo-img {
+  width: 100px;
+  height: auto;
+  vertical-align: center;
   display: inline-block;
   margin-right: 5px;
 }
 
-nav,
+nav {
+  flex-basis: 50%;
+}
+
+.main-nav,
 .nav {
   display: flex;
   justify-content: space-around;
+  /* background-color: white; */
+  /* height: 100px; */
 }
 
 nav a,
 .nav-item {
   cursor: pointer;
+  overflow: hidden;
+  padding: 0 20px;
 }
 
 .nav-item {
-  padding: 20px;
+  /* padding: 0%; */
+  height: 100px;
+  /* margin-right: 20px; */
+  /* height: 100px; */
+  align-items: center;
   font-size: 1.2em;
+  display: flex;
 }
 
 .nav-item:hover {
   background-color: purple;
+  /* background-size: cover; */
   color: white;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  overflow: hidden;
 }
 
 .nav {
@@ -79,7 +97,9 @@ nav a,
 .container {
   width: 70%;
   margin: 20px auto;
-  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+  top: 60px;
 }
 
 #error {
@@ -177,7 +197,7 @@ p {
 
 @media only screen and (max-width: 860px) {
   .nav-item {
-    padding: 20px 10px;
+    padding: 0 10px;
   }
 
   .header-content span {
@@ -236,7 +256,7 @@ p {
 
   .news-item img {
     width: 100%;
-    height: 50%;
+    height: auto;
   }
 
   .news-item .para {
@@ -244,21 +264,25 @@ p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   nav {
     position: fixed;
     width: 100%;
     bottom: 0;
     right: 0;
     background-color: coral;
+    height: 75px;
+  }
+
+  nav .nav-item {
+    position: relative;
+    bottom: 10px;
   }
 
   #content {
     margin-bottom: 80px;
   }
-}
 
-@media only screen and (max-width: 520px) {
   .container {
     width: 90%;
     bottom: 0;
@@ -277,5 +301,22 @@ p {
     bottom: 0;
     right: 0;
     margin: 70px auto;
+  }
+
+  nav .nav-item {
+    padding: 25px 10px;
+    /* font-size: 1.1em; */
+    display: block;
+  }
+
+  .header-content {
+    /* height: 80px;
+    width: 90%; */
+    /* display: inline-block */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-between;  */
+    align-items: center;
   }
 }
