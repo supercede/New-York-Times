@@ -1,5 +1,5 @@
-const CACHE_NAME = "nyt-current-v4";
-const DATA_CACHE_NAME = "nyt-data-cache-v4";
+const CACHE_NAME = "nyt-current-v7";
+const DATA_CACHE_NAME = "nyt-data-cache-v7";
 const FILES_TO_CACHE = [
   "",
   "index.html",
