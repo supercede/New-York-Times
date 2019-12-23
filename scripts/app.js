@@ -34,7 +34,7 @@ function displayArticle(params) {
       caption = img.caption;
     } else {
       img = "";
-      url = "./../images/nyt_logo.png";
+      url = ".././images/nyt_logo.png";
       caption = "";
     }
     // console.log(img);
