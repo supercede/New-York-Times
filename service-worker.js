@@ -1,5 +1,5 @@
-const CACHE_NAME = "nyt-current-v8";
-const DATA_CACHE_NAME = "nyt-data-cache-v8";
+const CACHE_NAME = "nyt-current-v10";
+const DATA_CACHE_NAME = "nyt-data-cache-v10";
 const FILES_TO_CACHE = [
   "",
   "index.html",
@@ -7,6 +7,8 @@ const FILES_TO_CACHE = [
   "images/my-news-logo.png",
   "images/nyt_logo.png",
   "images/icons/favicon-32x32.png",
+  "images/icons/favicon-16x16.png",
+  "images/icons/favicon-96x96.png",
   "images/install.svg",
   "scripts/app.js",
   "scripts/install.js"
