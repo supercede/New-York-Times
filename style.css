@@ -62,8 +62,6 @@ nav {
 .nav {
   display: flex;
   justify-content: space-around;
-  /* background-color: white; */
-  /* height: 100px; */
 }
 
 nav a,
@@ -74,18 +72,14 @@ nav a,
 }
 
 .nav-item {
-  /* padding: 0%; */
   height: 100px;
-  /* margin-right: 20px; */
-  /* height: 100px; */
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.3em;
   display: flex;
 }
 
 .nav-item:hover {
   background-color: purple;
-  /* background-size: cover; */
   color: white;
   overflow: hidden;
 }
@@ -126,7 +120,6 @@ nav a,
   grid-column: 1 / span 3;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  /* width: 70%; */
   grid-gap: 10px;
   grid-template-rows: auto;
 }
@@ -152,8 +145,52 @@ img {
   height: 300px;
 }
 
+#butInstall {
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  right: 3px;
+  margin: 0 auto;
+  background: url(/images/install.svg) center center no-repeat;
+  cursor: pointer;
+  height: 40px;
+  opacity: 0.74;
+  outline: none;
+  overflow: hidden;
+  width: 40px;
+}
+
 .info {
   margin: 10px 0;
+}
+
+.categories {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  display: inline-block;
+  color: white;
+  background-color: red;
+  padding: 15px;
+  margin-right: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.categories button:hover,
+.categories .active {
+  background-color: #fefff5;
+  color: coral;
+  font-weight: 500;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 a {
@@ -184,10 +221,14 @@ p {
   color: coral;
 }
 
+.logo-gen {
+  margin-top: 75px;
+}
+
 @media only screen and (max-width: 830px) {
   .container {
     max-width: 100%;
-    margin: 70px auto;
+    margin: 60px auto;
   }
 
   .header-content {
@@ -195,7 +236,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 880px) {
   .nav-item {
     padding: 0 10px;
   }
@@ -304,19 +345,20 @@ p {
   }
 
   nav .nav-item {
-    padding: 25px 10px;
-    /* font-size: 1.1em; */
-    display: block;
+    font-size: 1.1em;
   }
 
   .header-content {
-    /* height: 80px;
-    width: 90%; */
-    /* display: inline-block */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* justify-content: space-between;  */
     align-items: center;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    width: 50%;
   }
 }
