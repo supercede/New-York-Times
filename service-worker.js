@@ -1,15 +1,15 @@
-const CACHE_NAME = "nyt-current-v3";
-const DATA_CACHE_NAME = "nyt-data-cache-v3";
+const CACHE_NAME = "nyt-current-v4";
+const DATA_CACHE_NAME = "nyt-data-cache-v4";
 const FILES_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/images/my-news-logo.png",
-  "/images/nyt_logo.png",
-  "/images/icons/favicon-32x32.png",
-  "/images/install.svg",
-  "/scripts/app.js",
-  "/scripts/install.js"
+  "",
+  "index.html",
+  "style.css",
+  "images/my-news-logo.png",
+  "images/nyt_logo.png",
+  "images/icons/favicon-32x32.png",
+  "images/install.svg",
+  "scripts/app.js",
+  "scripts/install.js"
 ];
 
 self.addEventListener("install", evt => {
