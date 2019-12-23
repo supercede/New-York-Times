@@ -80,7 +80,7 @@
       sizes="16x16"
       href="/images/icons/favicon-16x16.png"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <meta
       name="description"
       content="A news app for fetching data from New York Times"
@@ -153,13 +153,13 @@
         >DesignEvo free logo designer</a
       >
     </div>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/install.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/install.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register("service-worker.js")
             .then(reg => console.log("Reg"))
             .catch(err => console.log("error", err));
         });
