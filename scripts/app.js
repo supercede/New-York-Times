@@ -24,7 +24,7 @@ function displayArticle(params) {
   articles = articles.slice(0, 16);
   let html = "";
   articles.forEach((article, i) => {
-    if (article.multimedia.length > 0) {
+    if (article.multimedia) {
       if (i === 0) {
         img = article.multimedia[article.multimedia.length - 1];
       } else {
